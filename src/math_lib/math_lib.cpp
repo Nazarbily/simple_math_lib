@@ -13,11 +13,11 @@ namespace MathLib
     {
         if (n <= 1)
             return false;
-        
+
         for (int i = 2; i * i <= n; i++)
         {
             if (n % i == 0)
-                return false;        
+                return false;
         }
         return true;
     }
@@ -42,5 +42,22 @@ namespace MathLib
 		if (b == 0) return a;
 		return GCD(b, a % b);
 	}
+	long long my_factorial(int n) {
+
+    if (n < 0) {
+        return -1;
+    }
+
+    if (n == 0) {
+        return 1;
+    }
+
+    long long result = 1;
+    for (int i = 1; i <= n; ++i) {
+        result *= i;
+    }
+
+    return result;
+}
 }
 
