@@ -69,6 +69,6 @@ namespace MathLib
 
     // Function to search GCD
     int GCD(int a, int b);
-    // Обчислення третього кута трикутника (в градусах)
+
     double calculate_third_angle(double angle1, double angle2);
 }
