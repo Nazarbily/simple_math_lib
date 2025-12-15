@@ -9,12 +9,12 @@ protected:
 
     void SetUp() override
     {
-		// Do some job before test run
+        // Do some job before test run
     }
 
     void TearDown() override
     {
-		// Do some job after test run
+        // Do some job after test run
     }
 };
 
@@ -77,8 +77,11 @@ TEST_F(MathLibTestFixture, GreatestCommonDivider)
 {
     EXPECT_EQ(MathLib::GCD(10, 6), 2);
 }
+
+// ВИПРАВЛЕНА ЧАСТИНА НИЖЧЕ
 TEST(MathLibTest, TriangleAngle) {
-    EXPECT_EQ(calculate_third_angle(60, 60), 60);
-    EXPECT_EQ(calculate_third_angle(90, 45), 45);
-    EXPECT_EQ(calculate_third_angle(100, 100), -1); // Неможливий трикутник
+    // Додано MathLib:: перед викликом функції
+    EXPECT_EQ(MathLib::calculate_third_angle(60, 60), 60);
+    EXPECT_EQ(MathLib::calculate_third_angle(90, 45), 45);
+    EXPECT_EQ(MathLib::calculate_third_angle(100, 100), -1); // Неможливий трикутник
 }
