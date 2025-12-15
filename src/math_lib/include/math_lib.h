@@ -3,28 +3,28 @@
 #include <stdexcept>
 
 namespace MathLib
-{	
+{
     // Function for addition
     template <typename T>
     T add(T a, T b)
     {
         return a + b;
     }
-    
+
     // Function for subtraction
     template <typename T>
     T subtract(T a, T b)
     {
         return a - b;
     }
-    
+
     // Function for multiplication
     template <typename T>
     T multiply(T a, T b)
     {
         return a * b;
     }
-    
+
     // Function for division
     template <typename T>
     T divide(T a, T b)
@@ -35,7 +35,7 @@ namespace MathLib
         }
         return a / b;
     }
-    
+
     // Function for comparing two floating point values
 	bool isEqual(double a, double b, double tolerance = 0.000000001);
 
@@ -60,7 +60,7 @@ namespace MathLib
         }
         return result;
     }
- 
+
     // Function to check whether value is prime
     bool isPrime(int n);
 
@@ -69,4 +69,6 @@ namespace MathLib
 
     // Function to search GCD
     int GCD(int a, int b);
+    // Обчислення третього кута трикутника (в градусах)
+    double calculate_third_angle(double angle1, double angle2);
 }

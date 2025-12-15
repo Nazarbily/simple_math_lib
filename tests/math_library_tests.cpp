@@ -77,3 +77,8 @@ TEST_F(MathLibTestFixture, GreatestCommonDivider)
 {
     EXPECT_EQ(MathLib::GCD(10, 6), 2);
 }
+TEST(MathLibTest, TriangleAngle) {
+    EXPECT_EQ(calculate_third_angle(60, 60), 60);
+    EXPECT_EQ(calculate_third_angle(90, 45), 45);
+    EXPECT_EQ(calculate_third_angle(100, 100), -1); // Неможливий трикутник
+}

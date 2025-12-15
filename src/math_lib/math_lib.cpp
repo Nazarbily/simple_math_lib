@@ -13,11 +13,11 @@ namespace MathLib
     {
         if (n <= 1)
             return false;
-        
+
         for (int i = 2; i * i <= n; i++)
         {
             if (n % i == 0)
-                return false;        
+                return false;
         }
         return true;
     }
@@ -42,5 +42,11 @@ namespace MathLib
 		if (b == 0) return a;
 		return GCD(b, a % b);
 	}
+	double calculate_third_angle(double angle1, double angle2) {
+    if (angle1 <= 0 || angle2 <= 0 || (angle1 + angle2) >= 180) {
+        return -1; // Помилка: некоректні кути
+    }
+    return 180.0 - angle1 - angle2;
+}
 }
 
